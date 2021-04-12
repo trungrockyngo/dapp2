@@ -15,7 +15,7 @@ Git repo for Submission  - Blockchain powered procurement system
 ---
 
 ### Course-scoped Business Workflow focus **(tentative)**
-__Bid Submission Opens__ ->  __Bid Submission Closes__
+__Tender Creation__ -> __Tender Manager__ -> __Bid Submission Opens__ ->  __Bid Submission Closes__
  ->  __Bid Evaluation__  ->  __Auditing__
 
 ---
