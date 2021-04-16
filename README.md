@@ -83,3 +83,6 @@ Functions breakdown follows the state machine's fundamentals
 
 #### Others 
 +[justadded] unathorizeTender(risksFound)
+
+
+pwa - progressive web app 
