@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <v-navigation-drawer
+      v-model="drawer"
+      color="#5b8c4a"
+      :mini-variant="miniVariant"
+      app
+      fixed
+      dark
+    >
+      <v-img src="../assets/tender-hsh.png" v-if="miniVariant" width="100%" gradient="to top right">
+        <v-row align="end">
+          <v-col align="center">
+            <v-avatar>
+              <v-icon size="50" color="black">fa-user-alt</v-icon>
+            </v-avatar>
+            <strong class="nav-img"> User name</strong>
+          </v-col>
+        </v-row>
+      </v-img>
+
+      <v-list v-if="miniVariant" nav dense>
+        <v-list-item-avatar color="white">
+          <v-icon color="black">fa-user-alt</v-icon>
+        </v-list-item-avatar>
+      </v-list>
+      <v-divider></v-divider>
+
+      <v-list nav dense>
+        <v-list-item v-for="item in navItems" :key="item.title" link :to="item.route">
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Sidebar",
+  props: {
+    navItems: {
+        type: Array, 
+        required: true, 
+    },
+    miniVariant: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
+    return {
+      drawer: true
+    };
+  }
+};
+</script>
