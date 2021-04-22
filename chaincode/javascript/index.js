@@ -6,7 +6,7 @@
 
 'use strict';
 
-const TenderBullet = require('./lib/tenderBullet.js');
+const TenderBullet = require('./lib/tendering.js');
 
-module.exports.TenderCreator = TenderCreator;
-module.exports.contracts = [ TenderCreator ];
+module.exports.Tendering = Tendering;
+module.exports.contracts = [ TenderBullet ];
