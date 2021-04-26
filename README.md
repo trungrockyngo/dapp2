@@ -1,6 +1,7 @@
 # Dapp2 Course Capstone - TenderBullet
 Git repo for Submission  - Blockchain powered procurement system 
 
+
 ## Brief description 
 ### Stakeholder 
 | Statekeholder |  Role | 
@@ -18,9 +19,8 @@ Git repo for Submission  - Blockchain powered procurement system
 __Bid Submission Opens__ ->  __Bid Submission Closes__
  ->  __Bid Evaluation__  ->  __Auditing__
 
----
 
-## Chaincode 
+## Tenderbullet's tentative functionalities  
 Functions breakdown follows the state machine's fundamentals
 
 ### Tender Creator
@@ -40,7 +40,7 @@ Functions breakdown follows the state machine's fundamentals
 #### Transition functions 
 + approve()
 + publish()
-+ seOpeningDate()
++ setOpeningDate()
 + setClosingDate()
 + publishBiddingInvitation() //
 + getSubmissions()
@@ -50,6 +50,7 @@ Functions breakdown follows the state machine's fundamentals
 + addTenderCategory()
 
 ---
+
 ### Bidder
 
 #### Transition functions 
@@ -83,3 +84,33 @@ Functions breakdown follows the state machine's fundamentals
 
 #### Others 
 +[justadded] unathorizeTender(risksFound)
+
+
+## Phase-1 Architecture 
+
+#### Business/Sequence high-level diagram
+![business-high-level](documentation/phase-1-business.png?raw=true) 
+
+#### Technlogy Architecture: submitting a bid 
+![bid-submssion](documentation/phase-1-bid_submisssion.png?raw=true)
+
+#### Technlogy Architecture: evaluating a bid 
+![bid_evaluation](documentation/phase-1-bid_evaluation.png?raw=true)
+
+
+### RESTful API design
+
+| Endpoint     	| Path            	| HTTP method 	| Query input                                                                   	| Output (w/ Description)                        	|
+|--------------	|-----------------	|-------------	|-------------------------------------------------------------------------------	|-------------------------------	|
+| /tender     	| /all              | GET         	| None                                                                          	| Object (All tenders)       	|
+|              	| /creator       	| GET        	| id                                                                               	|  success/fail (get creator of tender)           	|
+|              	| /bidder       	| GET        	| id                                                                               	|  success/fail (get bidder/investor of tender)           	|
+|              	| /amount       	| GET        	| id                                                                               	|  success/fail (get corresponding amount of that bidder of tender)           	|
+|              	| /manager        	| GET         	| id                                                                            	| success/fail (get manager of tender) 	|
+|              	| /beneficiary      | GET         	| id                                                                            	| success/fail (get beneficiary of tender )        |
+|              	| /approve          | POST         	| id, <br> manager                                                                  | success/fail (Approve the tender by the manager) | 
+|              	| /closeDate        | POST         	| id, <br> manager, <br> day, <br> month, <br> year                                 | success/fail (Set the closing date after validating manager on tender id) 	    |
+|              	| /openDate         | POST         	| id, <br> manager, <br> day, <br> month, <br> year                                 | success/fail Set the opening date after validating manager on tender id) 	    |
+| /submitTpl     | N/A        | POST         	| template                                                                          | success/fail (Submit one tender template) 	    |
+
+<br>
