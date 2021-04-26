@@ -1,0 +1,58 @@
+[
+    {
+        "transactionName": "tenderingExists",
+        "transactionLabel": "A test tenderingExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "createTendering",
+        "transactionLabel": "A test createTendering transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {
+            "privateValue": "some value"
+        }
+    },
+    {
+        "transactionName": "readTendering",
+        "transactionLabel": "A test readTendering transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "updateTendering",
+        "transactionLabel": "A test updateTendering transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {
+            "privateValue": "some other value"
+        }
+    },
+    {
+        "transactionName": "deleteTendering",
+        "transactionLabel": "A test deleteTendering transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "verifyTendering",
+        "transactionLabel": "A test verifyTendering transaction",
+        "arguments":[
+            "Org1MSP",
+            "001",
+            {
+                "privateValue": "some other value"
+            }
+        ],
+        "transientData": {}
+    }
+]

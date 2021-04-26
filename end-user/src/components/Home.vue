@@ -10,7 +10,7 @@
 
 <script>
 import SalesGraph from "@/components/SalesGraph";
-import salesData from "../mock-data/sales.json";
+import salesData from "./data/sales.json";
 export default {
   name: "Home",
   components: {

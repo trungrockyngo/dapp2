@@ -1,8 +1,8 @@
 <template>
   <v-container app>
     <div>
-      <NavBar @toMiniVariant="changeMiniVariant" />
-      <!-- <SideBar :navItems="dashboardNavItems" :miniVariant="miniVariant" /> -->
+      <AppBar @toMiniVariant="changeMiniVariant" />
+      <SideBar :navItems="dashboardNavItems" :miniVariant="miniVariant" />
       <v-main app>
         <router-view></router-view>
       </v-main>
@@ -12,8 +12,8 @@
 </template>
 
 <script>
-// import SideBar from "@/components/SideBar";
-import NavBar from "@/components/NavBar";
+import SideBar from "@/components/SideBar";
+import AppBar from "@/components/AppBar";
 import Footer from "@/components/Footer";
 
 export default {
@@ -24,8 +24,8 @@ export default {
     },
   },
   components: {
-    // SideBar,
-    NavBar,
+    SideBar,
+    AppBar,
     Footer,
   },
   data() {

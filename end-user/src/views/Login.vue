@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="#5b8c4a" dark>
-      <v-toolbar-title class="ml-2 ">TenderBullet</v-toolbar-title>
+      <v-toolbar-title class="ml-2 ">TENDERBULLET</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
@@ -66,8 +66,8 @@ export default {
       if (this.user === "demo" && this.pass === "demo"){
 
         await this.$session.start();
-        await this.$session.set("customerId", "123456");
-        console.log(this.$session.get("customerId"));
+        await this.$session.set("tenderCreatorId", "123456");
+        console.log(this.$session.get("tenderCreatorId"));
         this.$router.push("/dashboard");
       }
       else {

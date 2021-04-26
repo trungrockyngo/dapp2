@@ -1,12 +1,10 @@
 /*
- * Copyright IBM Corp. All Rights Reserved.
- *
  * SPDX-License-Identifier: Apache-2.0
  */
 
 'use strict';
 
-const TenderBullet = require('./lib/tendering.js');
+const TenderingContract = require('./lib/tendering-contract');
 
-module.exports.Tendering = Tendering;
-module.exports.contracts = [ TenderBullet ];
+module.exports.TenderingContract = TenderingContract;
+module.exports.contracts = [ TenderingContract ];

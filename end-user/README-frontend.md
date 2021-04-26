@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Frontend high-level code structure & flow 
 index.js -> set up different multiple pages on router/router.js on top of plugins/vuetify.js 
 
-App => Login -> Dashboard (each view is based on consisting of NavBar, Home, Footer) -> Salesgraph 
+App => Login -> Dashboard (each view is based on consisting of AppBar(NavBar), SideBar, Home, Footer) -> Salesgraph 
 
 ## Preset plugins and packages worthnoted in this front-end: 
 
