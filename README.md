@@ -22,9 +22,8 @@ Git repo for Submission  - Blockchain powered procurement system
 __Bid Submission Opens__ ->  __Bid Submission Closes__
  ->  __Bid Evaluation__  ->  __Auditing__
 
----
 
-## Chaincode 
+## Tenderbullet's tentative functionalities  
 Functions breakdown follows the state machine's fundamentals
 
 ### Tender Creator
@@ -44,7 +43,7 @@ Functions breakdown follows the state machine's fundamentals
 #### Transition functions 
 + approve()
 + publish()
-+ seOpeningDate()
++ setOpeningDate()
 + setClosingDate()
 + publishBiddingInvitation() //
 + getSubmissions()
@@ -54,6 +53,7 @@ Functions breakdown follows the state machine's fundamentals
 + addTenderCategory()
 
 ---
+
 ### Bidder
 
 #### Transition functions 

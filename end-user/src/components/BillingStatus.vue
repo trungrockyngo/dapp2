@@ -10,13 +10,17 @@
     <v-row justify="center">
       <v-dialog v-model="dialog" persistent max-width="600px">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
+            <p>something</p>
+        <v-btn
             color="#32a852"
             dark
             v-bind="attrs"
             v-on="on"
-            @click="updateOracle"
+
+            @click="showSomeKindOfBill"
           >
+        <!-- <template>
+          <v-btn color="#32a852" dark> -->
             Get Data
           </v-btn>
         </template>
@@ -57,7 +61,6 @@
 </template>
 
 <script>
-
 </script>
 
 <style scoped></style>
