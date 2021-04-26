@@ -3,8 +3,8 @@
 const walletFolder = './wallet/Org1';
 const walletFile = 'Org1 Admin';
 const connProfileFolder = '../gateway';
-const connProfile = '1OrgLocalFabricOrg1GatewayConnection.json';
-const contractName = 'EVChargerReg';
+const connProfile = '1OrgLocalGatewayConn.json';
+const contractName = 'TenderBullet';
 const channelName = 'mychannel';
 
 module.exports = {

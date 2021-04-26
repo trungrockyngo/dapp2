@@ -4,7 +4,9 @@
 
 'use strict';
 
-const TenderingContract = require('./lib/tendering-contract');
+const TenderingPrivateDataCollection = require('./lib/tendering-PDC');
+const TenderingContract = require('./lib/tendering');
 
+module.exports.TenderingPrivateDataCollection = TenderingPrivateDataCollection;
 module.exports.TenderingContract = TenderingContract;
-module.exports.contracts = [ TenderingContract ];
+module.exports.contracts = [ TenderingPrivateDataCollection, TenderingContract ];

@@ -71,7 +71,7 @@ class Tendering extends Contract {
         this.templateID++; 
         const recordTemplateID = "TEMPLATE"+ this.templateID;
         
-        await ctx.stub.putState(recordTemplateID, Buffer.from(JSON.stringify(templateID)));
+        await ctx.stub.putState(recordTemplateID, Buffer.from(JSON.stringify(templateID, template)));
 
         console.info('============= END : End Submit Tendering Template ===========');
     }
@@ -110,6 +110,32 @@ class Tendering extends Contract {
         tender.fullDate = moment(`${_year}${_month}${_day}`); 
         await ctx.stub.putState(tenderID, Buffer.from(JSON.stringify(tender)));
         console.info('============= END : Set opening date  ===========');
+    } 
+
+    async getBidder(ctx, _tenderID) {
+        console.info('============= START : Get creator from the current tender  ===========');
+
+        const tenderAsBytes = await ctx.stub.getState(_tenderID);
+        if (!tenderAsBytes || tenderAsBytes.length === 0) {
+            throw new Error(`tenderID ${_tenderID} does not exist`);
+        }
+
+        const tender = JSON.parse(tenderAsBytes.toString());
+        console.info('============= END : Get creator from the current tender ===========');
+        return tender.investor.name; 
+    } 
+
+    async getAmount(ctx, _tenderID) {
+        console.info('============= START : Get creator from the current tender  ===========');
+
+        const tenderAsBytes = await ctx.stub.getState(_tenderID);
+        if (!tenderAsBytes || tenderAsBytes.length === 0) {
+            throw new Error(`tenderID ${_tenderID} does not exist`);
+        }
+
+        const tender = JSON.parse(tenderAsBytes.toString());
+        console.info('============= END : Get creator from the current tender ===========');
+        return tender.investor.amount; 
     } 
 
     async getCreator(ctx, _tenderID) {

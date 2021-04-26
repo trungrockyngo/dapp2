@@ -13,7 +13,7 @@ async function getCollectionName(ctx) {
     return collectionName;
 }
 
-class TenderingContract extends Contract {
+class TenderingPrivateDataCollection extends Contract {
 
     async tenderingExists(ctx, tenderingId) {
         const collectionName = await getCollectionName(ctx);
@@ -99,4 +99,4 @@ class TenderingContract extends Contract {
 
 }
 
-module.exports = TenderingContract;
+module.exports = TenderingPrivateDataCollection;
