@@ -1,6 +1,10 @@
 # Dapp2 Course Capstone - TenderBullet
 Git repo for Submission  - Blockchain powered procurement system 
 
+## User stories 
+
+
+
 ## Brief description 
 ### Stakeholder 
 | Statekeholder |  Role | 
@@ -83,3 +87,6 @@ Functions breakdown follows the state machine's fundamentals
 
 #### Others 
 +[justadded] unathorizeTender(risksFound)
+
+
+pwa - progressive web app 

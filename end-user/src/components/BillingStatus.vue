@@ -16,6 +16,7 @@
             dark
             v-bind="attrs"
             v-on="on"
+
             @click="showSomeKindOfBill"
           >
         <!-- <template>
@@ -31,10 +32,18 @@
             <v-container>
               <v-row>
                 <v-col cols="12">
-                  <v-text-field label="Total units" :value="totalUnits" disabled></v-text-field>
+                  <v-text-field
+                    label="Total Units"
+                    :value="totalUnits"
+                    disabled
+                  ></v-text-field>
                 </v-col>
                 <v-col cols="12">
-                  <v-text-field label="Last balance" :value="lastBalance" disabled></v-text-field>
+                  <v-text-field
+                    label="Last Meter Reading"
+                    :value="lastMeterReading"
+                    disabled
+                  ></v-text-field>
                 </v-col>
               </v-row>
             </v-container>
@@ -52,13 +61,6 @@
 </template>
 
 <script>
-export default {
-  name: "BillingStatus",
-  data: () => {},
-  lastBalance: "",
-  totalUnits: "",
-  methods: {
-    async showSomeKindOfBill() {}
-  }
-};
 </script>
+
+<style scoped></style>

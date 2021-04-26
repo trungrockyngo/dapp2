@@ -31,12 +31,12 @@ const routes = [
             },
             {
                 path: "billing", 
-                name: "BillingStatus", 
+                name: "billingStatus", 
                 component: () => import("@/components/BillingStatus.vue")
             },
             {
                 path: "sales", 
-                name: "sales", 
+                name: "salesGraph", 
                 component: () => import("@/components/SalesGraph.vue")
             }
         ]

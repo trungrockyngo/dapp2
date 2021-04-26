@@ -8,17 +8,27 @@
       fixed
       dark
     >
-      <v-img src="../assets/tender-hsh.png" v-if="miniVariant" width="100%" gradient="to top right">
+      <!-- <v-img
+        src="../assets/tender-hsh.png"
+        v-if="!miniVariant"
+        width="100%" -->
+      <v-img
+        src="../assets/tender-hsh.png"
+        v-if="!miniVariant"
+        width="100%"
+        gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
+      >
         <v-row align="end">
           <v-col align="center">
-            <v-avatar>
+            <v-avatar color="white" size="100">
               <v-icon size="50" color="black">fa-user-alt</v-icon>
             </v-avatar>
-            <strong class="nav-img"> User name</strong>
+            <p>
+              <strong class="nav-img">User Name</strong>
+            </p>
           </v-col>
         </v-row>
       </v-img>
-
       <v-list v-if="miniVariant" nav dense>
         <v-list-item-avatar color="white">
           <v-icon color="black">fa-user-alt</v-icon>
@@ -43,11 +53,11 @@
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "SideBar",
   props: {
     navItems: {
-        type: Array, 
-        required: true, 
+      type: Array,
+      required: true
     },
     miniVariant: {
       type: Boolean,
@@ -61,3 +71,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.nav-img {
+  color: white;
+}
+</style>
